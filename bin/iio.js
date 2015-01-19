@@ -5,10 +5,7 @@ var cwd = process.cwd();
 var config = require(cwd + '/iio.config');
 var iio = require('./../index.js')(config);
 
-// TODO: Get all the args after iio command and run them like below
+args = process.argv;
+args.splice(0, 2);
 
-iio.start([
-  'jade:html:watch',
-  'browser:sync',
-  'less:watch'
-]);
+iio.start(args);

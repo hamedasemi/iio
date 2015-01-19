@@ -1,6 +1,10 @@
 module.exports = function(config) {
     var gulp = require('gulp');
     gulp.config = config;
+
+// TODO: Show all available tasks and configured tasks
+// TODO: Load the tasks based on config file
+
     var help = require('./tasks/help'),
         stylus = require('./tasks/stylus'),
         less = require('./tasks/less'),
