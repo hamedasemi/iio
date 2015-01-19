@@ -1,0 +1,29 @@
+{
+    "name": "iio",
+    "version": "0.0.2",
+    "bin": {
+        "iio": "./bin/iio.js"
+    },
+    "author": "Hamed Asemi",
+    "dependencies": {
+        "browser-sync": "^1.9.0",
+        "gulp": "^3.8.10",
+        "gulp-autoprefixer": "^2.1.0",
+        "gulp-base64": "^0.1.2",
+        "gulp-browserify": "^0.5.1",
+        "gulp-combine-media-queries": "^0.2.0",
+        "gulp-concat": "^2.4.3",
+        "gulp-jade": "^0.10.0",
+        "gulp-jasmine-phantom": "^1.1.1",
+        "gulp-less": "^2.0.1",
+        "gulp-minify-css": "^0.3.12",
+        "gulp-plumber": "^0.6.6",
+        "gulp-rename": "^1.2.0",
+        "gulp-stylus": "^2.0.0",
+        "gulp-task-listing": "^1.0.0",
+        "gulp-uglify": "^1.0.2",
+        "gulp-watch": "^3.0.0",
+        "karma": "^0.12.31"
+    },
+    "license": "ISC"
+}
