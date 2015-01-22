@@ -122,7 +122,7 @@ We are done &#9786;
 
 ## Start Coding
 
-Run iio and start coding
+Run iio and to get the list of available tasks and example.
 
 ```sh
 $ iio
