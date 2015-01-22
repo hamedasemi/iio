@@ -32,13 +32,10 @@ $ npm install iio --global
 
 ## Configuration
 
-Set the config file in your project directory like below:
+Set the config file in your project root directory as "iio.config.json" like below:
 
 ```json
 {
-    "sketch": {
-        "src": "sketch"
-    },
     "browserify": {
         "src": "app",
         "dest": "www/js",
@@ -90,10 +87,6 @@ Set the config file in your project directory like below:
         "extensions": [],
         "transform": []
     },
-    "assets": {
-        "src": "app/assets",
-        "dest": "www/assets"
-    },
     "jasmine": {
         "src": "app",
         "type": "*[sS]pec.js",
@@ -103,7 +96,7 @@ Set the config file in your project directory like below:
         },
         "dependencies": []
     },
-    "server": {
+    "browsersync": {
         "dependencies": [],
         "options": {
             "logSnippet": false,
@@ -118,10 +111,6 @@ Set the config file in your project directory like below:
             "open": "external",
             "browser": ["google chrome"]
         }
-    },
-    "open": {
-        "editor": "Sublime Text",
-        "dependencies": []
     }
 }
 ```
