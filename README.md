@@ -4,6 +4,8 @@ The right way of using node.js none blocking I/O to ease and speed up configurat
 
 The current startup version supports Browserify, BrowserSync, Jade, Jasmine, JavaScript, Less, Stylus, Karma and task listing.
 
+Soon will be added supports for TypeScript, CoffeeScript, Sass, FontFace, Modernizr, Sketch, Image Optimization, Favicon and etc.
+
 ## Background
 -   [Node.js®](http://nodejs.org) is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 -   [NPM](https://www.npmjs.org/), Node Packaged Modules.
