@@ -5,6 +5,10 @@
         "iio": "./bin/iio.js"
     },
     "author": "Hamed Asemi",
+    "contributors": [{
+        "name": "Hamed Asemi",
+        "email": "h-@live.se"
+    }],
     "dependencies": {
         "browser-sync": "^1.9.0",
         "gulp": "^3.8.10",
@@ -25,5 +29,9 @@
         "gulp-watch": "^3.0.0",
         "karma": "^0.12.31"
     },
-    "license": "ISC"
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iio-codes/iio.git"
+    }
 }
