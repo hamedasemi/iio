@@ -19,7 +19,7 @@ private
 
 .DS_Store
 
-todo
+*.todo
 
 app
 www
