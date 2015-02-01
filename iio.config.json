@@ -1,0 +1,103 @@
+{
+    "fontface": {
+        "src": "app/assets/fonts",
+        "dest": "www/assets/fonts",
+        "input": "main.js",
+        "type": "*.{ttf,eot}",
+        "output": "bundle.min.js",
+        "dependencies": [],
+        "embed": ["woff", "ttf"],
+        "collate": true
+    },
+    "symbolssketch": {
+        "src": "app/sketch",
+        "dest": "www/assets/icons",
+        "input": "symbol-font-14px.sketch",
+        "type": "*.sketch/Data",
+        "output": "bundle.min.js",
+        "options": {
+
+        	},
+        "demo": "www/assets/icons",
+        "template": "fontawesome-style",
+        "dependencies": [],
+        "embed": ["woff", "ttf"],
+        "collate": true
+    },
+    "browserify": {
+        "src": "app",
+        "dest": "www/js",
+        "input": "main.js",
+        "type": "*.js",
+        "output": "bundle.min.js",
+        "dependencies": [],
+        "transform": ["debowerify", "deglobalify"]
+    },
+    "js": {
+        "src": "app",
+        "dest": "www/js",
+        "input": "main.js",
+        "type": "*.js",
+        "output": "bundle.min.js",
+        "dependencies": []
+    },
+    "stylus": {
+        "src": "app/styles",
+        "dest": "www/css",
+        "input": "main.styl",
+        "type": "*.styl",
+        "output": "bundle.min.css",
+        "options": ["last 2 versions", "> 1%", "ie 9", "safari"],
+        "maxImageSize": 300000000,
+        "dependencies": [],
+        "extensions": [],
+        "transform": []
+    },
+    "jade": {
+        "src": "app",
+        "dest": "www",
+        "input": "main.jade",
+        "type": "*.jade",
+        "output": "index.html",
+        "dependencies": [],
+        "extensions": [],
+        "pretty": true
+    },
+    "less": {
+        "src": "app/styles",
+        "dest": "www/css",
+        "input": "main.less",
+        "type": "*.less",
+        "output": "bundle.min.css",
+        "options": ["last 2 versions", "> 1%", "ie 9", "safari"],
+        "maxImageSize": 300000000,
+        "dependencies": [],
+        "extensions": [],
+        "transform": []
+    },
+    "jasmine": {
+        "src": "app",
+        "type": "*[sS]pec.js",
+        "options": {
+            "integration": true,
+            "specHtml": "test/index.html"
+        },
+        "dependencies": []
+    },
+    "browsersync": {
+        "dependencies": [],
+        "options": {
+            "logSnippet": false,
+            "server": {
+                "baseDir": "./www"
+            },
+            "_proxy": "localhost:3000",
+            "https": false,
+            "logConnections": true,
+            "logFileChanges": true,
+            "online": true,
+            "open": "external",
+            "browser": ["google chrome"]
+        }
+    }
+}
