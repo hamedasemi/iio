@@ -18,7 +18,7 @@ for (var attrname in userConfig) {
 }
 
 var tasks = [];
-for (var task in config) {
+for (var task in userConfig) {
     tasks.push(task);
 }
 config.tasks = tasks;
