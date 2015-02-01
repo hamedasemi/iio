@@ -4,6 +4,9 @@
     "bin": {
         "iio": "./bin/iio.js"
     },
+    "scripts": {
+    		"iio": "node ./bin/iio.js"
+    },
     "author": "Hamed Asemi",
     "contributors": [{
         "name": "Hamed Asemi",
