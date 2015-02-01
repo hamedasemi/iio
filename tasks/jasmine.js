@@ -3,14 +3,14 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
     conf = gulp.config.jasmine,
-    confBrow = gulp.config.browserify;
+    confBrowserify = gulp.config.browserify;
 
 gulp.task('jasmine', function() {
     gulp.src(conf.src + '/' + conf.type)
-        .pipe(jasmine(conf.options));
+        .pipe(jasmine(conf.options.options));
 });
 
 gulp.task('jasmine:watch', ['jasmine'], function() {
     this.watch(conf.src + '/' + conf.type, ['jasmine']);
-    this.watch(confBrow.src + '/' + confBrow.type, ['jasmine']);
+    this.watch(confBrowserify.src + '/' + confBrowserify.type, ['jasmine']);
 });

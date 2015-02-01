@@ -14,17 +14,12 @@ var gulp = require('gulp'),
 gulp.task('stylus', function() {
     gulp.src(conf.src + '/' + conf.input)
         .pipe(plumber())
-        .pipe(stylus())
-        .pipe(autoprefixer(conf.options))
-        .pipe(cmq({
-            log: true
-        }))
-        .pipe(minify())
+        .pipe(stylus(conf.options.options))
+        .pipe(autoprefixer(conf.options.prefix))
+        .pipe(cmq(conf.options.cmq))
+        .pipe(minify(conf.options.minify))
         .pipe(rename(conf.output))
-        .pipe(base64({
-            maxImageSize: conf.maxImageSize,
-            debug: true
-        }))
+        .pipe(base64(conf.options.base64))
         .pipe(gulp.dest(conf.dest))
         .pipe(reload({
             stream: true

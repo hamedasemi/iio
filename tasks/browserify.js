@@ -11,10 +11,7 @@ gulp.task('browserify', conf.dependencies, function() {
             read: false
         })
         .pipe(plumber())
-        .pipe(browserify({
-            transform: conf.transform,
-            extensions: conf.extensions
-        }))
+        .pipe(browserify(conf.options.options))
         .pipe(rename(conf.output))
         .pipe(gulp.dest(conf.dest))
         .pipe(reload({

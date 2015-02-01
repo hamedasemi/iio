@@ -11,7 +11,7 @@ gulp.task('js', function() {
     gulp.src(conf.src + '/' + conf.type)
         .pipe(plumber())
         .pipe(concat(conf.output))
-        .pipe(uglify())
+        .pipe(uglify(conf.options.uglify))
         .pipe(gulp.dest(conf.dest))
         .pipe(reload({
             stream: true

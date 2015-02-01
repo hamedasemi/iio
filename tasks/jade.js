@@ -9,16 +9,9 @@ var gulp = require('gulp'),
     conf = gulp.config.jade;
 
 gulp.task('jade:html', function() {
-
-    // TODO: Use gulp-data to fetch the data from a json file
-
-    var data = {};
     gulp.src(conf.src + '/' + conf.input)
         .pipe(plumber())
-        .pipe(jade({
-            locals: data,
-            pretty: conf.pretty
-        }))
+        .pipe(jade(conf.options.options))
         .pipe(rename(conf.output))
         .pipe(gulp.dest(conf.dest))
         .pipe(reload({

@@ -5,14 +5,22 @@
         "input": "main.js",
         "type": "*.js",
         "output": "bundle.min.js",
-        "dependencies": [],
-        "transform": ["debowerify", "deglobalify"]
+        "options": {
+            "options": {
+                "transform": ["debowerify", "deglobalify"]
+            }
+        },
+        "dependencies": []
     },
     "js": {
         "src": "app",
         "dest": "www/js",
         "input": "main.js",
         "type": "*.js",
+        "options": {
+            "options": {},
+            "uglify": {}
+        },
         "output": "bundle.min.js",
         "dependencies": []
     },
@@ -22,8 +30,25 @@
         "input": "main.styl",
         "type": "*.styl",
         "output": "bundle.min.css",
-        "options": ["last 2 versions", "> 1%", "ie 9", "safari"],
-        "maxImageSize": 300000000,
+        "options": {
+            "options": {
+
+            },
+            "prefix": [
+                "last 2 versions",
+                "> 1%",
+                "ie 9",
+                "safari"
+            ],
+            "base64": {
+                "maxImageSize": 300000000,
+                "debug": true
+            },
+            "minify": "",
+            "cmq": {
+                "log": true
+            }
+        },
         "dependencies": [],
         "extensions": [],
         "transform": []
@@ -34,6 +59,9 @@
         "input": "main.jade",
         "type": "*.jade",
         "output": "index.html",
+        "options": {
+            "options": {}
+        },
         "dependencies": [],
         "extensions": [],
         "pretty": true
@@ -44,8 +72,25 @@
         "input": "main.less",
         "type": "*.less",
         "output": "bundle.min.css",
-        "options": ["last 2 versions", "> 1%", "ie 9", "safari"],
-        "maxImageSize": 300000000,
+        "options": {
+            "options": {
+
+            },
+            "prefix": [
+                "last 2 versions",
+                "> 1%",
+                "ie 9",
+                "safari"
+            ],
+            "base64": {
+                "maxImageSize": 300000000,
+                "debug": true
+            },
+            "minify": "",
+            "cmq": {
+                "log": true
+            }
+        },
         "dependencies": [],
         "extensions": [],
         "transform": []
@@ -54,25 +99,29 @@
         "src": "app",
         "type": "*[sS]pec.js",
         "options": {
-            "integration": true,
-            "specHtml": "test/index.html"
+            "options": {
+                "integration": true,
+                "specHtml": "test/index.html"
+            }
         },
         "dependencies": []
     },
     "browsersync": {
         "dependencies": [],
         "options": {
-            "logSnippet": false,
-            "server": {
-                "baseDir": "./www"
-            },
-            "_proxy": "localhost:3000",
-            "https": false,
-            "logConnections": true,
-            "logFileChanges": true,
-            "online": true,
-            "open": "external",
-            "browser": ["google chrome"]
+            "options": {
+                "logSnippet": false,
+                "server": {
+                    "baseDir": "./www"
+                },
+                "_proxy": "localhost:3000",
+                "https": false,
+                "logConnections": true,
+                "logFileChanges": true,
+                "online": true,
+                "open": "external",
+                "browser": ["google chrome"]
+            }
         }
     }
 }
