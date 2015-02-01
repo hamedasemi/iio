@@ -2,24 +2,26 @@ node_modules
 bower_components
 
 export
-.export
+*.export
 *.export.*
 
 config
-.config
+*.config
 *.config.*
 
 archive
-.archive
+*.archive
 *.archive.*
 
 log
-.log
+*.log
 *.log.*
 
 private
-.private
+*.private
 *.private.*
+
+.DS_Store
 
 app
 www
