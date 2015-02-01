@@ -5,7 +5,17 @@ var cwd = process.cwd();
 var colors = require('chalk');
 console.log(colors.bold.cyan.underline('\nYap! iio is fast\n'));
 
-var config = require(cwd + '/iio.config');
+var config = {};
+
+var defaultConfig = require(cwd + '/defaults/iio.config');
+var userConfig = require(cwd + '/iio.config');
+
+for (var attrname in defaultConfig) {
+    config[attrname] = defaultConfig[attrname];
+}
+for (var attrname in userConfig) {
+    config[attrname] = userConfig[attrname];
+}
 
 var tasks = [];
 for (var task in config) {
