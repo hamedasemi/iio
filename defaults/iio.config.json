@@ -1,4 +1,20 @@
 {
+    "fontface": {
+        "src": "app/assets/fonts",
+        "dest": {
+            "fontface": "app/styles",
+            "files": "www/css/assets/fonts",
+            "relative": "css/assets/fonts"
+        },
+        "type": "*.ttf",
+        "output": "fontfaces.less",
+        "options": {
+            "options": {
+                "embed": ["woff"],
+                "collate": true
+            }
+        }
+    },
     "browserify": {
         "src": "app",
         "dest": "www/js",
