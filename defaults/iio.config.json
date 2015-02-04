@@ -6,24 +6,25 @@
             "files": "www/css/assets/fonts",
             "relative": "css/assets/fonts"
         },
-        "type": "*.ttf",
         "output": "fontfaces.less",
+        "type": "*.ttf",
         "options": {
             "options": {
                 "embed": ["woff"],
                 "collate": true
             }
-        }
+        },
+        "dependencies": []
     },
     "browserify": {
         "src": "app",
         "dest": "www/js",
         "input": "main.js",
-        "type": "*.js",
         "output": "bundle.min.js",
+        "type": "*.js",
         "options": {
             "options": {
-                "transform": ["debowerify", "deglobalify"]
+                "_transform": ["debowerify", "deglobalify"]
             }
         },
         "dependencies": []
@@ -31,21 +32,32 @@
     "js": {
         "src": "app",
         "dest": "www/js",
-        "input": "main.js",
+        "input": "{main,another}.js",
+        "output": "bundle.min.js",
         "type": "*.js",
         "options": {
             "options": {},
             "uglify": {}
         },
-        "output": "bundle.min.js",
+        "dependencies": []
+    },
+    "markdown": {
+        "src": ".",
+        "dest": ".",
+        "input": "README.md",
+        "output": "index.html",
+        "type": "*.md",
+        "options": {
+            "options": {}
+        },
         "dependencies": []
     },
     "stylus": {
         "src": "app/styles",
         "dest": "www/css",
         "input": "main.styl",
-        "type": "*.styl",
         "output": "bundle.min.css",
+        "type": "*.styl",
         "options": {
             "options": {
 
@@ -66,15 +78,14 @@
             }
         },
         "dependencies": [],
-        "extensions": [],
-        "transform": []
+        "extensions": []
     },
     "jade": {
         "src": "app",
         "dest": "www",
         "input": "main.jade",
-        "type": "*.jade",
         "output": "index.html",
+        "type": "*.jade",
         "options": {
             "options": {}
         },
@@ -86,8 +97,8 @@
         "src": "app/styles",
         "dest": "www/css",
         "input": "main.less",
-        "type": "*.less",
         "output": "bundle.min.css",
+        "type": "*.less",
         "options": {
             "options": {
 
@@ -108,8 +119,7 @@
             }
         },
         "dependencies": [],
-        "extensions": [],
-        "transform": []
+        "extensions": []
     },
     "jasmine": {
         "src": "app",
@@ -123,12 +133,11 @@
         "dependencies": []
     },
     "browsersync": {
-        "dependencies": [],
         "options": {
             "options": {
                 "logSnippet": false,
                 "server": {
-                    "baseDir": "./www"
+                    "baseDir": "./"
                 },
                 "_proxy": "localhost:3000",
                 "https": false,
@@ -138,6 +147,8 @@
                 "open": "external",
                 "browser": ["google chrome"]
             }
-        }
+        },
+        "dependencies": [],
+        "extensions": []
     }
 }
