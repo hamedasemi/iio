@@ -1,4 +1,7 @@
 {
-	"fontface": {
-	}
+	"browsersync": {},
+	"jade": {},
+	"stylus": {},
+	"js": {},
+	"markdown": {}
 }
