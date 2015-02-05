@@ -2,6 +2,6 @@
 	"browsersync": {},
 	"jade": {},
 	"stylus": {},
-	"js": {},
+	"less": {},
 	"markdown": {}
 }
