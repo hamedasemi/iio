@@ -110,7 +110,8 @@
                 "safari"
             ],
             "base64": {
-                "maxImageSize": 300000000,
+                "maxImageSize": 30000,
+                "extensions": [],
                 "debug": true
             },
             "minify": "",
@@ -137,15 +138,25 @@
             "options": {
                 "logSnippet": false,
                 "server": {
-                    "baseDir": "./"
+                    "baseDir": "./www"
                 },
                 "_proxy": "localhost:3000",
                 "https": false,
                 "logConnections": true,
                 "logFileChanges": true,
-                "online": true,
+                "online": false,
+                "logLevel": "debug",
                 "open": "external",
-                "browser": ["google chrome"]
+                "logFileChanges": true,
+                "logPrefix": "Synced",
+                "startPath": "/?Hello",
+                "notify": true,
+                "browser": ["google chrome"],
+                "ghostMode": {
+                    "clicks": true,
+                    "forms": true,
+                    "scroll": false
+                }
             }
         },
         "dependencies": [],
