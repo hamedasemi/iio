@@ -4,7 +4,7 @@ var _ = require("underscore");
 var cwd = process.cwd();
 var colors = require('chalk');
 
-console.log(colors.bold.cyan.underline('\nYap! iio is fast\n'));
+console.log(colors.bold.cyan.underline('\nYap! iio is easy\n'));
 
 try {
     var userConfig = require(cwd + '/iio.config');
