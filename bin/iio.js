@@ -13,9 +13,6 @@ try {
     process.exit(code=0);
 }
 
-
-
-
 var defaultConfig = require('./../defaults/iio.config');
 
 var tasks = [];
@@ -23,12 +20,9 @@ for (var task in userConfig) {
     tasks.push(task);
 }
 
-// Override basic _.defaults
 _.defaults = require('merge-defaults');
 
 var config = _.defaults(userConfig, defaultConfig);
-
-console.log(config);
 
 config.tasks = tasks;
 
