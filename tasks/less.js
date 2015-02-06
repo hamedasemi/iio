@@ -11,13 +11,17 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     conf = gulp.config.less;
 
+var sourcemaps = require('gulp-sourcemaps');
+
 gulp.task('less', function() {
     gulp.src(conf.src + '/' + conf.input)
         .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(less(conf.options.options))
         .pipe(autoprefixer(conf.options.prefix))
         .pipe(cmq(conf.options.cmq))
         .pipe(minify(conf.options.minify))
+        .pipe(sourcemaps.write())
         .pipe(rename(conf.output))
         .pipe(base64(conf.options.base64))
         .pipe(gulp.dest(conf.dest))
