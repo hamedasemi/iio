@@ -1,7 +1,13 @@
 {
-	"browsersync": {},
-	"jade": {},
-	"stylus": {},
-	"less": {},
-	"markdown": {}
+    "browsersync": {
+        "options": {
+            "options": {
+                "server": false
+            }
+        }
+    },
+    "jade": {},
+    "stylus": {},
+    "less": {},
+    "markdown": {}
 }
