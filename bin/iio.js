@@ -9,10 +9,14 @@ console.log(colors.bold.cyan.underline('\nYap! iio is easy\n'));
 try {
     var userConfig = require(cwd + '/iio.config');
 } catch (ex) {
-    var userConfig = {};
+    console.log(colors.bold.red.underline('\nUnable to start, iio config file could not be found!\n'));
+    process.exit(code=0);
 }
 
-var defaultConfig = require(cwd + '/defaults/iio.config');
+
+
+
+var defaultConfig = require('./../defaults/iio.config');
 
 var tasks = [];
 for (var task in userConfig) {
@@ -23,6 +27,8 @@ for (var task in userConfig) {
 _.defaults = require('merge-defaults');
 
 var config = _.defaults(userConfig, defaultConfig);
+
+console.log(config);
 
 config.tasks = tasks;
 
