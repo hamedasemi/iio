@@ -2,7 +2,7 @@
     "browsersync": {
         "options": {
             "options": {
-                "server": "."
+                "server": "./www"
             }
         }
     },
