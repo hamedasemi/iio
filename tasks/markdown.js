@@ -26,7 +26,6 @@ gulp.task('markdown:map', function() {
         }));
 });
 
-
 gulp.task('markdown:github', function() {
     gulp.src(conf.src + '/' + conf.input)
         .pipe(markdownGithub())
