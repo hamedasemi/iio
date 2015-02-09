@@ -2,16 +2,18 @@
     "fontface": {
         "src": "app/assets/fonts",
         "dest": {
-            "fontface": "app/styles",
+            "fontface": "app/styles/assets/fonts",
             "files": "www/css/assets/fonts",
-            "relative": "css/assets/fonts"
+            "relative": "/css/assets/fonts"
         },
-        "output": "fontfaces.less",
+        "output": {
+            "ext": ".less"
+        },
         "type": "*.ttf",
         "options": {
             "options": {
                 "embed": ["woff"],
-                "collate": true
+                "collate": false
             }
         },
         "dependencies": []
